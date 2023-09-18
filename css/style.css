@@ -3543,7 +3543,7 @@ pre .javascript .function {
   transform: rotate(360deg);
 }
 .sidebar-menu-icon {
-  background: url("/images/taichi.svg") no-repeat center/80%;
+  background: url("../images/taichi.svg") no-repeat center/80%;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -3599,7 +3599,7 @@ pre .javascript .function {
   opacity: 1;
   -ms-filter: none;
   filter: none;
-  background: url("/images/taichi-fill.svg") no-repeat center/80%;
+  background: url("../images/taichi-fill.svg") no-repeat center/80%;
 }
 [data-theme="dark"] ::-webkit-scrollbar,
 [data-theme="dark"] ::-webkit-scrollbar-track {
