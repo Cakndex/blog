@@ -12,6 +12,7 @@
 
     
     <title>
+        前端flex布局详解 |
         
         Cakndex&#39;s blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -22,14 +23,35 @@
     
 <link rel="stylesheet" href="/blog/css/loader.css">
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Cakndex&#39;s blog">
-<meta property="og:url" content="http://cakndex.github.io/blog/index.html">
+    <meta name="description" content="前端flex布局详解  flex属性（父元素）flex-direction（设置排列方向，确定主轴交叉轴） 默认为 row（横向排列），可选参数： row-reverse | column | column-reverse row：  column  row-reverse  column-reverse    注意left和right盒子的位置 flex-direction确定主轴后，与之相反的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端flex布局详解">
+<meta property="og:url" content="http://cakndex.github.io/blog/2023/10/07/%E5%89%8D%E7%AB%AFflex%E5%B8%83%E5%B1%80%E8%AF%A6%E8%A7%A3/index.html">
 <meta property="og:site_name" content="Cakndex&#39;s blog">
+<meta property="og:description" content="前端flex布局详解  flex属性（父元素）flex-direction（设置排列方向，确定主轴交叉轴） 默认为 row（横向排列），可选参数： row-reverse | column | column-reverse row：  column  row-reverse  column-reverse    注意left和right盒子的位置 flex-direction确定主轴后，与之相反的">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Cakndex/blog-imgs/Snipaste_2023-10-07_12-43-19.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Cakndex/blog-imgs/Snipaste_2023-10-07_13-12-41.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Cakndex/blog-imgs/Snipaste_2023-10-07_13-13-44.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Cakndex/blog-imgs/Snipaste_2023-10-07_13-16-26.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Cakndex/blog-imgs/Snipaste_2023-10-07_13-19-52.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Cakndex/blog-imgs/Snipaste_2023-10-07_13-24-36.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Cakndex/blog-imgs/Snipaste_2023-10-07_13-43-25.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Cakndex/blog-imgs/Snipaste_2023-10-07_13-46-08.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Cakndex/blog-imgs/Snipaste_2023-10-07_13-49-24.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Cakndex/blog-imgs/Snipaste_2023-10-07_13-53-25.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Cakndex/blog-imgs/Snipaste_2023-10-07_14-24-12.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Cakndex/blog-imgs/Snipaste_2023-10-07_14-34-51.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Cakndex/blog-imgs/Snipaste_2023-10-07_14-36-22.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Cakndex/blog-imgs/Snipaste_2023-10-07_14-45-06.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Cakndex/blog-imgs/Snipaste_2023-10-07_14-50-05.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Cakndex/blog-imgs/Snipaste_2023-10-07_14-53-49.png">
+<meta property="article:published_time" content="2023-10-07T06:55:18.035Z">
+<meta property="article:modified_time" content="2023-10-07T07:04:17.323Z">
 <meta property="article:author" content="Cakndex">
 <meta property="article:tag" content="Cakndex blog 博客">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Cakndex/blog-imgs/Snipaste_2023-10-07_12-43-19.png">
     
         <link rel="alternate" href="/blog/atom.xml" title="Cakndex's blog" type="application/atom+xml">
     
@@ -104,7 +126,7 @@
         <div id="wrap">
             <header id="header">
     
-        <img data-src="https://cdn.jsdelivr.net/gh/Cakndex/blog-imgs/banner.jpg" data-sizes="auto" alt="" class="lazyload">
+        <img data-src="https://cdn.jsdelivr.net/gh/Cakndex/blog-imgs/banner.jpg" data-sizes="auto" alt="前端flex布局详解" class="lazyload">
     
     <div id="header-outer" class="outer">
         <div id="header-title" class="inner">
@@ -112,16 +134,12 @@
                 
                     
                     
-                        <a href="/blog/" id="logo"><h1>Cakndex&#39;s blog</h1></a>
+                        <a href="/blog/" id="logo"><h1>前端flex布局详解</h1></a>
                     
                 
             </div>
             
                 
-                
-                    <h2 id="subtitle-wrap">
-                        <a href="/blog/" id="subtitle">看看你的</a>
-                    </h2>
                 
             
         </div>
@@ -165,188 +183,150 @@
 </header>
 
             <div id="content" class="outer">
-                <section id="main">
-    
-        
-    <div class="post-wrap-left wow fadeInUp">
-        
-            <a class="post-link" href="/blog/2023/10/07/%E5%89%8D%E7%AB%AFflex%E5%B8%83%E5%B1%80%E8%AF%A6%E8%A7%A3/"></a>
-        
-        
-        <div class="post-cover-left">
-            
-                
-                
-                    <img data-src="https://cdn.jsdelivr.net/gh/Cakndex/blog-imgs/banner.jpg" data-sizes="auto" alt="前端flex布局详解" class="lazyload">
-                
+                <section id="main"><article id="post-前端flex布局详解" class="h-entry article article-type-post"
+         itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <div class="article-inner">
+        <div class="article-meta">
+            <div class="article-date wow slideInLeft">
+    <a href="/blog/2023/10/07/%E5%89%8D%E7%AB%AFflex%E5%B8%83%E5%B1%80%E8%AF%A6%E8%A7%A3/" class="article-date-link">
+        <time datetime="2023-10-07T06:55:18.035Z"
+              itemprop="datePublished">2023-10-07</time>
+    </a>
+</div>
+
             
 
         </div>
-        <div class="post-info">
-            <div class="post-meta">
-                <a><span class="icon-calendar"></span>2023-10-07</a>
-                
-                    <a><span class="icon-pencil"></span>581 words</a>
-                
-                
-                    <a><span class="icon-clock"></span>2 mins</a>
-                
-            </div>
-            <h2 class="post-title">前端flex布局详解</h2>
-            <article class="post-article">
-                
-                    前端flex布局详解
+        <div class="hr-line"></div>
+        
 
-flex属性（父元素）flex-direction（设置排列方向，确定主轴交叉轴）
-默认为 row（横向排列），可选参数： row-reverse | column | column-reverse
-row：
+        <div class="e-content article-entry" itemprop="articleBody">
+            
+                <h1 id="前端flex布局详解"><a href="#前端flex布局详解" class="headerlink" title="前端flex布局详解"></a>前端flex布局详解</h1><p><img src="https://cdn.jsdelivr.net/gh/Cakndex/blog-imgs/Snipaste_2023-10-07_12-43-19.png"></p>
+<hr>
+<h2 id="flex属性（父元素）"><a href="#flex属性（父元素）" class="headerlink" title="flex属性（父元素）"></a>flex属性（父元素）</h2><h3 id="flex-direction（设置排列方向，确定主轴交叉轴）"><a href="#flex-direction（设置排列方向，确定主轴交叉轴）" class="headerlink" title="flex-direction（设置排列方向，确定主轴交叉轴）"></a>flex-direction（设置排列方向，确定主轴交叉轴）</h3><ul>
+<li><p>默认为 row（横向排列），可选参数： row-reverse | column | column-reverse</p>
+<p><em>row：</em></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Cakndex/blog-imgs/Snipaste_2023-10-07_13-12-41.png" alt="a"></p>
+<p><em>column</em></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Cakndex/blog-imgs/Snipaste_2023-10-07_13-13-44.png" alt="s"></p>
+<p><em>row-reverse</em></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Cakndex/blog-imgs/Snipaste_2023-10-07_13-16-26.png" alt="s"></p>
+<p><em>column-reverse</em></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Cakndex/blog-imgs/Snipaste_2023-10-07_13-19-52.png" alt="s"></p>
+</li>
+</ul>
+<p><u>注意left和right盒子的位置</u></p>
+<h4 id="flex-direction确定主轴后，与之相反的轴就是交叉轴"><a href="#flex-direction确定主轴后，与之相反的轴就是交叉轴" class="headerlink" title="flex-direction确定主轴后，与之相反的轴就是交叉轴"></a>flex-direction确定主轴后，与之相反的轴就是交叉轴</h4><hr>
+<h3 id="justify-content（主轴对齐方式）"><a href="#justify-content（主轴对齐方式）" class="headerlink" title="justify-content（主轴对齐方式）"></a>justify-content（主轴对齐方式）</h3><ul>
+<li>可选参数：center | start | end | flex-start | flex-end | space-between｜space-around</li>
+</ul>
+<h4 id="justify-content-center-居中对齐"><a href="#justify-content-center-居中对齐" class="headerlink" title="justify-content: center 居中对齐"></a>justify-content: center 居中对齐</h4><p>  <img src="https://cdn.jsdelivr.net/gh/Cakndex/blog-imgs/Snipaste_2023-10-07_13-24-36.png" alt="s"></p>
+<h4 id="justify-content-space-between-子元素沿主轴均匀分布，位于首尾两端的子容器与父容器相切"><a href="#justify-content-space-between-子元素沿主轴均匀分布，位于首尾两端的子容器与父容器相切" class="headerlink" title="justify-content: space-between 子元素沿主轴均匀分布，位于首尾两端的子容器与父容器相切"></a>justify-content: space-between 子元素沿主轴均匀分布，位于首尾两端的子容器与父容器相切</h4><p>  <img src="https://cdn.jsdelivr.net/gh/Cakndex/blog-imgs/Snipaste_2023-10-07_13-43-25.png" alt="a"></p>
+<h4 id="justify-content-space-around-子元素沿主轴均匀分布，位于首尾两端的子容器到父容器的距离是子容器间距的一半"><a href="#justify-content-space-around-子元素沿主轴均匀分布，位于首尾两端的子容器到父容器的距离是子容器间距的一半" class="headerlink" title="justify-content: space-around 子元素沿主轴均匀分布，位于首尾两端的子容器到父容器的距离是子容器间距的一半"></a>justify-content: space-around 子元素沿主轴均匀分布，位于首尾两端的子容器到父容器的距离是子容器间距的一半</h4><p>  <img src="https://cdn.jsdelivr.net/gh/Cakndex/blog-imgs/Snipaste_2023-10-07_13-46-08.png" alt="s"></p>
+<hr>
+<h3 id="align-items（交叉轴对齐方式）"><a href="#align-items（交叉轴对齐方式）" class="headerlink" title="align-items（交叉轴对齐方式）"></a>align-items（交叉轴对齐方式）</h3><ul>
+<li><p>align-items: center | flex-start | flex-end | base-line | stretch</p>
+<p>align-items: center 居中对齐</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Cakndex/blog-imgs/Snipaste_2023-10-07_13-49-24.png" alt="s"></p>
+<p><strong>注</strong>：需要为父元素设置高度<em>height</em></p>
+</li>
+</ul>
+<h4 id="align-items-baseline-基线对齐，这里的-baseline-默认是指首行文字，所有子元素的首行文字的顶部在同一高度"><a href="#align-items-baseline-基线对齐，这里的-baseline-默认是指首行文字，所有子元素的首行文字的顶部在同一高度" class="headerlink" title="align-items: baseline 基线对齐，这里的 baseline 默认是指首行文字，所有子元素的首行文字的顶部在同一高度"></a>align-items: baseline 基线对齐，这里的 baseline 默认是指首行文字，所有子元素的首行文字的顶部在同一高度</h4><p>  <img src="https://cdn.jsdelivr.net/gh/Cakndex/blog-imgs/Snipaste_2023-10-07_13-53-25.png" alt="s"></p>
+<hr>
+<h3 id="flex-wrap（设置换行）"><a href="#flex-wrap（设置换行）" class="headerlink" title="flex-wrap（设置换行）"></a>flex-wrap（设置换行）</h3><ul>
+<li>flex-wrap: nowrap | wrap | wrap-reverse</li>
+</ul>
+<h4 id="flex-wrap-wrap-换行"><a href="#flex-wrap-wrap-换行" class="headerlink" title="flex-wrap: wrap 换行"></a>flex-wrap: wrap 换行</h4><h3 id=""><a href="#" class="headerlink" title=""></a><img src="https://cdn.jsdelivr.net/gh/Cakndex/blog-imgs/Snipaste_2023-10-07_14-24-12.png" alt="s"></h3><hr>
+<h3 id="align-content（设置多行内容如何分布）"><a href="#align-content（设置多行内容如何分布）" class="headerlink" title="align-content（设置多行内容如何分布）"></a>align-content（设置多行内容如何分布）</h3><ul>
+<li>可选参数：flex-start | center | flex-end | space-between | space-around | stretch</li>
+</ul>
+<h4 id="align-content-space-around-等边距均匀分布"><a href="#align-content-space-around-等边距均匀分布" class="headerlink" title="align-content: space-around 等边距均匀分布"></a>align-content: space-around 等边距均匀分布</h4><p>  <img src="https://cdn.jsdelivr.net/gh/Cakndex/blog-imgs/Snipaste_2023-10-07_14-34-51.png" alt="s"></p>
+<h4 id="align-content-space-between-等间距均匀分布"><a href="#align-content-space-between-等间距均匀分布" class="headerlink" title="align-content: space-between 等间距均匀分布"></a>align-content: space-between 等间距均匀分布</h4><p>  <img src="https://cdn.jsdelivr.net/gh/Cakndex/blog-imgs/Snipaste_2023-10-07_14-36-22.png" alt="s"></p>
+<hr>
+<h2 id="flex-属性（子元素）"><a href="#flex-属性（子元素）" class="headerlink" title="flex 属性（子元素）"></a>flex 属性（子元素）</h2><h3 id="order（-改变子元素的排列顺序）"><a href="#order（-改变子元素的排列顺序）" class="headerlink" title="order（ 改变子元素的排列顺序）"></a>order（ 改变子元素的排列顺序）</h3><ul>
+<li><p>默认值为 0，可选参数：inherit | initial | unset ，可以为负值，数值越小排列越靠前。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Cakndex/blog-imgs/Snipaste_2023-10-07_14-45-06.png" alt="s"></p>
+</li>
+</ul>
+<h3 id="flex-grow（子元素弹性扩展的比例）"><a href="#flex-grow（子元素弹性扩展的比例）" class="headerlink" title="flex-grow（子元素弹性扩展的比例）"></a>flex-grow（子元素弹性扩展的比例）</h3><ul>
+<li><p>可选参数：inherit | initial | unset ，也可以是数字，负值无效，默认为 0</p>
+</li>
+<li><p>如果所有子元素的 flex-grow 的值都为数字的话，则会把父元素分为若干份，每个子元素根据 flex-grow 的值扩展</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Cakndex/blog-imgs/Snipaste_2023-10-07_14-50-05.png" alt="s"></p>
+</li>
+</ul>
+<h3 id="flex-basis-控制基准大小"><a href="#flex-basis-控制基准大小" class="headerlink" title="flex-basis 控制基准大小"></a>flex-basis 控制基准大小</h3><ul>
+<li><p>默认是 auto，可选参数：inherit | initial | unset ，可以是 width 或 height，也可以是百分数，不能为负值</p>
+</li>
+<li><p>表示在不伸缩的情况下子容器的原始尺寸。横轴为主轴时，表宽度，主轴为纵向时代表高度。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Cakndex/blog-imgs/Snipaste_2023-10-07_14-53-49.png" alt="s"></p>
+</li>
+</ul>
+<h3 id="align-self-单独定义子元素沿交叉轴排列的方式）"><a href="#align-self-单独定义子元素沿交叉轴排列的方式）" class="headerlink" title="align-self (单独定义子元素沿交叉轴排列的方式）"></a>align-self (单独定义子元素沿交叉轴排列的方式）</h3><ul>
+<li>可选参数：flex-start | center | flex-end | baseline | stretch</li>
+<li>与 align-items 的使用方式基本相同</li>
+</ul>
+<h2 id="flex（简写属性）"><a href="#flex（简写属性）" class="headerlink" title="flex（简写属性）"></a>flex（简写属性）</h2><ul>
+<li><p>缩写格式，用空格隔开</p>
+</li>
+<li><p>flex: flex-grow | flex-shrink | flex-basis</p>
+</li>
+<li><p>flex: 1;</p>
+</li>
+<li><p>flex: 2 2;</p>
+</li>
+<li><p>flex: 1 3 10%;</p>
+</li>
+</ul>
 
-column
-
-row-reverse
-
-column-reverse
-
-
-
-注意left和right盒子的位置
-flex-direction确定主轴后，与之相反的轴就是交叉轴
-justify-content（主轴对齐方式）
-可选参数：center | start | end | flex-start | flex-end | space-between｜spa
-                
-            </article>
+            
         </div>
+        <footer class="article-footer">
+            <a data-url="http://cakndex.github.io/blog/2023/10/07/%E5%89%8D%E7%AB%AFflex%E5%B8%83%E5%B1%80%E8%AF%A6%E8%A7%A3/" data-id="clnfowt7i00025su0gadc3jrr" data-title="前端flex布局详解"
+               class="article-share-link">Share</a>
+            
+            
+            
+            
+
+        </footer>
     </div>
-
-
     
         
-    <div class="post-wrap-right wow fadeInUp">
+    <nav id="article-nav" class="wow fadeInUp">
         
-            <a class="post-link" href="/blog/2023/10/06/vue%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93/"></a>
         
-        <div class="post-cover-right">
-            
+            <div class="article-nav-link-wrap article-nav-link-right">
                 
+                    
+                    
+                        <img data-src="https://cdn.jsdelivr.net/gh/Cakndex/blog-imgs/banner.jpg" data-sizes="auto" alt="vue基础语法总结"
+                             class="lazyload">
+                    
                 
-                    <img data-src="https://cdn.jsdelivr.net/gh/Cakndex/blog-imgs/banner.jpg" data-sizes="auto" alt="vue基础语法总结" class="lazyload">
-                
-            
-        </div>
-        <div class="post-info">
-            <div class="post-meta">
-                <a><span class="icon-calendar"></span>2023-10-06</a>
-                
-                    <a><span class="icon-pencil"></span>2.2k words</a>
-                
-                
-                    <a><span class="icon-clock"></span>9 mins</a>
-                
+                <a href="/blog/2023/10/06/vue%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93/"></a>
+                <div class="article-nav-caption">Older</div>
+                <h3 class="article-nav-title">
+                    
+                        vue基础语法总结
+                    
+                </h3>
             </div>
-            <h2 class="post-title">vue基础语法总结</h2>
-            <article class="post-article">
-                
-                    vue基础语法总结插值表达式1.作用：利用表达式进行插值，渲染到页面中表达式：是可以被求值的代码，JS引擎会将其计算出一个结果
-以下的情况都是表达式：
-1234567891011121314151617money + 100money - 100money * 10money / 10price &amp;gt;= 100 ? &amp;#x27;贵&amp;#x27;:&amp;#x27;便宜&amp;#x27;obj.namearr[0]fn()obj.fn()
-
-2.语法插值表达式语法：
-12345678910111213&amp;lt;h3&amp;gt;&amp;#123;&amp;#123;title&amp;#125;&amp;#125;&amp;lt;h3&amp;gt;&amp;lt;
-                
-            </article>
-        </div>
-    </div>
+        
+    </nav>
 
 
     
-        
-    <div class="post-wrap-left wow fadeInUp">
-        
-            <a class="post-link" href="/blog/2023/10/04/%E6%99%BA%E6%85%A7%E5%95%86%E5%9F%8E%E7%AC%94%E8%AE%B001-%E5%88%9D%E5%A7%8B%E5%8C%96%E9%A1%B9%E7%9B%AE/"></a>
-        
-        
-        <div class="post-cover-left">
-            
-                
-                
-                    <img data-src="https://cdn.jsdelivr.net/gh/Cakndex/blog-imgs/banner.jpg" data-sizes="auto" alt="智慧商城笔记01-初始化项目" class="lazyload">
-                
-            
-
-        </div>
-        <div class="post-info">
-            <div class="post-meta">
-                <a><span class="icon-calendar"></span>2023-10-04</a>
-                
-                    <a><span class="icon-pencil"></span>529 words</a>
-                
-                
-                    <a><span class="icon-clock"></span>2 mins</a>
-                
-            </div>
-            <h2 class="post-title">智慧商城笔记01-初始化项目</h2>
-            <article class="post-article">
-                
-                    智慧商城笔记01-初始化项目接口文档：https://apifox.com/apidoc/shared-12ab6b18-adc2-444c-ad11-0e60f5693f66/doc-2221080
-演示地址：http://cba.itlike.com/public/mweb/#/
-01. 项目功能演示1.明确功能模块启动准备好的代码，演示移动端面经内容，明确功能模块
-
-2.项目收获
-02. 项目创建目录初始化vue-cli 建项目1.安装脚手架 (已安装)
-1npm i @vue/cli -g
-
-2.创建项目
-1vue create hm-shopping
+</article>
 
 
-选项
-
-123456789V
-                
-            </article>
-        </div>
-    </div>
 
 
-    
-        
-    <div class="post-wrap-right wow fadeInUp">
-        
-            <a class="post-link" href="/blog/2023/09/18/hello-world/"></a>
-        
-        <div class="post-cover-right">
-            
-                
-                
-                    <img data-src="https://cdn.jsdelivr.net/gh/Cakndex/blog-imgs/banner.jpg" data-sizes="auto" alt="Hello World" class="lazyload">
-                
-            
-        </div>
-        <div class="post-info">
-            <div class="post-meta">
-                <a><span class="icon-calendar"></span>2023-09-18</a>
-                
-                    <a><span class="icon-pencil"></span>75 words</a>
-                
-                
-                    <a><span class="icon-clock"></span>1 min</a>
-                
-            </div>
-            <h2 class="post-title">Hello World</h2>
-            <article class="post-article">
-                
-                    Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new &amp;quot;My New Post&amp;quot;
-
-More info: Writing
-Run server1$ hexo ser
-                
-            </article>
-        </div>
-    </div>
 
 
-    
+
+
 
 
 
